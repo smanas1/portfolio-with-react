@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SM Anas Portfolio Design System - Modern MERN Stack Developer Theme */
+
+@layer base {
+  :root {
+    /* Light Theme */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    --primary: 15 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 15 100% 55%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 225 15% 25%;
+
+    --muted: 210 40% 95%;
+    --muted-foreground: 225 10% 50%;
+
+    --accent: 15 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 15 100% 55%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 50%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(15 100% 60%) 0%, hsl(25 100% 55%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    
+    --shadow-sm: 0 2px 8px hsl(15 100% 60% / 0.1);
+    --shadow-md: 0 8px 25px hsl(15 100% 60% / 0.15);
+    --shadow-lg: 0 20px 40px hsl(15 100% 60% / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 225 15% 6%;
+    --foreground: 0 0% 95%;
+
+    --card: 225 15% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 225 15% 6%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 15 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 15 100% 65%;
+
+    --secondary: 225 15% 12%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 225 15% 10%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 15 100% 60%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 15 100% 65%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 225 15% 15%;
+    --input: 225 15% 15%;
+    --ring: 210 100% 55%;
+
+    --hero-gradient: linear-gradient(135deg, hsl(15 100% 60%) 0%, hsl(25 100% 55%) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(225 15% 8%) 0%, hsl(225 15% 12%) 100%);
+    
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 8px 25px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 20px 40px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Custom Utilities */
+.hero-gradient {
+  background: var(--hero-gradient);
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+.card-gradient {
+  background: var(--card-gradient);
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.text-gradient {
+  background: var(--hero-gradient);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
