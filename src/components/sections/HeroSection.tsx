@@ -34,7 +34,7 @@ export function HeroSection() {
             <img
               src="/public/hero.png"
               alt="SM Anas - MERN Stack Developer"
-              className="w-full h-full rounded-full object-cover border-4 border-primary/20 shadow-lg"
+              className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
             />
             <div className="absolute inset-0 rounded-full  animate-glow" />
           </div>
