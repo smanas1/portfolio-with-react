@@ -32,7 +32,7 @@ export function HeroSection() {
           {/* Profile Picture */}
           <div className="relative mx-auto w-32 h-32 md:w-52 md:h-52 animate-fade-in-up">
             <img
-              src="/public/hero.png"
+              src="../../../public/hero.png"
               alt="SM Anas - MERN Stack Developer"
               className="w-full h-full rounded-full object-cover border-4 border-primary shadow-lg"
             />
