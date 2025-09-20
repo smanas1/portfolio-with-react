@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import walletProject from "@/assets/wallet-project.jpg";
+import ecommerceProject from "@/assets/ecommerce.png";
 
 export function ProjectsSection() {
   const projects = [
@@ -34,6 +35,30 @@ export function ProjectsSection() {
       ],
       github: "https://github.com/smanas1/Assignment-06-Backend",
       demo: "https://banglapay.smanas.net/",
+      status: "Featured",
+    },
+    {
+      title: "Ecommerce Platform",
+      description:
+        "A full-featured ecommerce application built with the MERN stack, providing seamless shopping experiences with secure payment integration, order management, and responsive UI.",
+      image: ecommerceProject,
+      technologies: [
+        "React",
+        "Shadcn UI",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "SSLCOMMERZ API",
+      ],
+      features: [
+        "Product listing with search and filter",
+        "Shopping cart and checkout system",
+        "Secure user authentication and authorization",
+        "Order and payment management",
+        "Responsive and user-friendly design",
+      ],
+      github: "https://github.com/smanas1/ecommerce-server",
+      demo: "https://ecommerce.smanas.net/",
       status: "Featured",
     },
   ];

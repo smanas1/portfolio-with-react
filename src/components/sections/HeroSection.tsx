@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profilePicture from "@/assets/profile-picture.jpg";
+import { Link } from "react-router-dom";
 
 export function HeroSection() {
   const scrollToSection = (href: string) => {
@@ -88,14 +89,16 @@ export function HeroSection() {
               View My Work
               <ArrowDown className="ml-2 h-4 w-4" />
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto hover:scale-105 transition-all"
-            >
-              Download Resume
-              <FileUser className="ml-2 h-4 w-4" />
-            </Button>
+            <Link to="https://drive.google.com/file/d/14aWMtipJRXYGCdMg3wi4sAtPIyBdPr92/view?usp=sharing">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto hover:scale-105 transition-all"
+              >
+                Download Resume
+                <FileUser className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
 
           {/* Social Links */}
